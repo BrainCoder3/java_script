@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8g</title>
+</head>
+<body>
+    <script>
+        function convertLenght(lenght, from, to) {
+            let result=0;
+            if(from === 'miles' && to==='km'){
+
+                result = lenght*1.6;
+
+            }
+            else if (from === 'km'&& to === 'miles'){
+                result= lenght /1.6;
+            }
+            
+            console.log(`${result} ${to}`);
+            
+        }
+        convertLenght(50,'miles','km');
+        convertLenght(32,'km','miles');
+        convertLenght(50,'km','km');
+
+        
+    </script>
+</body>
+</html>

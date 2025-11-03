@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="
+        isGuessedright('heads');
+       
+
+        
+        ">
+        heads
+    </button>
+    <button onclick="
+    isGuessedright('tails');">
+        tails
+    </button>
+    <script>
+
+        const score=JSON.parse(localStorage.getItem('score'))||{
+            wins:0,
+            losses:0,
+        }
+        localStorage.setItem('score',JSON.stringify(score));
+
+
+
+        function isGuessedright(guess) {
+
+            let randomNumber=Math.random();
+            let result ='';
+            
+            result= randomNumber<0.5? 'heads':'tails';
+            guess===result? console.log('you win'):console.log('you lose');
+            guess===result?score.wins++:score.losses++;
+            console.log(score);
+            localStorage.setItem('score',JSON.stringify(score));
+            alert(JSON.parse(localStorage.getItem(score)));
+        }
+
+
+    </script>
+</body>
+</html>
