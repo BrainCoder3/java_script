@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9d</title>
+</head>
+<body>
+    <input type="text" placeholder="type something..." onkeydown="
+        
+        formSubmit(event);
+        " onkeyup="
+        formSubmit(event);">
+    <button onclick="
+    formSubmit();
+    
+    ">Submit</button>
+    <p class="js-p-class">
+
+    </p>
+    <script>
+        function formSubmit(event) {
+            let formMessage = document.querySelector('input');
+            let pMessage = document.querySelector('.js-p-class');
+            pMessage.innerHTML= `Your name is : ${formMessage.value}`;
+            console.log(pMessage.innerHTML);
+            if (event === 'Enter') {
+                pMessage.innerHTML= `Your name is : ${formMessage.value}`;
+            }
+        }
+
+    </script>
+</body>
+</html>

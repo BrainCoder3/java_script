@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11n</title>
+</head>
+<body>
+    <script>
+        function countWord(words){
+            let valueCount={};
+            let newList=[];
+            let index=0;
+            for (let i = 0; i < words.length; i++) {
+                
+                let count =0;
+                let temp=0;
+                
+                for (let j = i; j < words.length; j++) {
+                    if (words[i]===words[j]) {
+                        count++;                    
+                    }
+                    
+                    
+                }
+       
+                console.log(count);
+                for (let k = 0; k < newList.length; k++) {
+                        
+                        if (newList[k]===words[i]) {
+                            index=0;
+                            break;
+                        }
+                        else{
+                            index++;
+                            
+
+                        }               
+                }
+                console.log('iciicic');
+                console.log(`${index}`);
+                if (index !==0 ||newList.length ==0) {
+                        valueCount[`${words[i]}`]=count;
+                        newList.push(words[i]);
+                        console.log(valueCount);
+                        console.log(newList);
+
+                }
+            }
+            console.log(`${newList}`);
+
+            return valueCount;
+
+            
+
+        }
+        console.log(['apple','grape','apple','apple']);
+        console.log(countWord(['apple','grape','apple','apple']));
+    </script>
+</body>
+</html>

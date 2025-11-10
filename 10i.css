@@ -1,0 +1,27 @@
+button{
+    font-size: 25px;
+    border-radius: 19px;
+    border: none;
+    color: white;
+    width: 35px;
+    height: 35px;
+    
+
+}
+
+.button-number{
+    background-color: black;
+}
+
+.button-sign{
+    background-color: orange;
+}
+.button-number-clear{
+    width: 100px;
+    background-color: black;
+}
+
+.display{
+    font-size: 30px;
+    font-weight:600;
+}

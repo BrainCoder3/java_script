@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11L</title>
+</head>
+<body>
+    <script>
+        function countPositive(nums) {
+            let evenNumber =0;
+            let oddNumber =0;
+            for (let i = 0; i < nums.length; i++) {
+                if (nums[i] >0) {
+                    evenNumber++;
+                }
+                else{
+                    oddNumber++;
+                }
+                
+            }
+
+            console.log(`the number of positive number is ${evenNumber}`);
+            console.log(`the number of negative numbers or equal is ${oddNumber}`);
+            return evenNumber;
+        }
+        console.log(countPositive([1,-3,5]));
+        console.log(countPositive([-2,3,-5,7,10]));
+
+    </script>
+</body>
+</html>

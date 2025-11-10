@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11u</title>
+</head>
+<body>
+    <script>
+        function removeEgg(foods) {
+            let result =[];
+            k=0;
+            const foodReverse=foods.slice().reverse();
+
+            for (let i = 0; i < foodReverse.length; i++) {
+
+                if (foodReverse[i]==='egg' && k<2) {
+                    k++;
+                    continue;
+                }
+                else{
+                    result.push(foodReverse[i]);
+                }
+            }
+            console.log(foodReverse);
+            return result.reverse();
+        }
+        const foods=['egg','apple','egg','egg','ham'];
+        console.log(removeEgg(foods));
+        console.log(foods);        
+    </script>
+</body>
+</html>
